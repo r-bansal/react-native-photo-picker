@@ -86,7 +86,7 @@ class ImagePicker extends Component {
 
     for (let i = 0; i < newImages.length; i += 1) {
       const image = newImages[i]
-      const sectionTitle = this.props.getSectionHeader(moment(image.timeStamp))
+      const sectionTitle = this.props.getSectionHeader(moment(image.timeStamp/1000))
       this.sections[sectionTitle] = this.sections[sectionTitle]
         ? this.sections[sectionTitle].concat(image)
         : [image]
